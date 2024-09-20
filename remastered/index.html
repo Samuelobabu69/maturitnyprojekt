@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Simple Remote</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg">
+        <div class="bg-fade-top"></div>
+        <div class="bg-fade-bottom"></div>
+        <div class="bg-moving">
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+            <div class="bg-stripe"></div>
+        </div>
+    </div>
+
+    <div class="d-flex login">
+        <img class="logo-img" src="assets/logo.png">
+        <div class="d-flex password-input">
+            <div class="password-wrapper">
+                <input type="password" id="access-password" placeholder="Password">
+            </div>
+            <button class="show-password-btn">
+                <img src="assets/hide-icon.png">
+            </button>
+        </div>
+        <button class="connect-btn">Connect</button>
+    </div>
+
+    <div class="d-flex control" style="display: flex;">
+        <div class="d-flex mousepad-to-keyboard-switch"><img src="assets/keyboard.png"></div>
+        <div class="d-flex keyboard-to-mousepad-switch"><img src="assets/mouse.png"></div>
+        <div class="d-flex mousepad">
+            <div class="d-flex mousepad-border">
+                Touchpad
+            </div>
+        </div>
+        <div class="keyboard">
+            <div class="d-flex keyboard-letters">
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="1">1</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="2">2</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="3">3</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="4">4</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="5">5</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="6">6</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="7">7</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="8">8</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="9">9</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="0">0</div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="q">q</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="w">w</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="e">e</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="r">r</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="t">t</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="z">z</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="u">u</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="i">i</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="o">o</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="p">p</div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="a">a</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="s">s</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="d">d</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="f">f</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="g">g</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="h">h</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="j">j</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="k">k</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="l">l</div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key special-key-wide shift-key"><img src="assets/lower-case.png"></div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="y">y</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="x">x</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="c">c</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="v">v</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="b">b</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="n">n</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="m">m</div>
+                    <div class="d-flex key special-key-wide backspace-key"><img src="assets/backspace.png"></div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key special-key-wide l-to-n-key">123</div>
+                    <div class="d-flex key aftertap-key" data-char=",">,</div>
+                    <div class="d-flex key space-key"><img src="assets/space.png"></div>
+                    <div class="d-flex key aftertap-key" data-char=".">.</div>
+                    <div class="d-flex key special-key-wide enter-key"><img src="assets/enter.png"></div>
+                </div>
+            </div>
+            
+            <div class="keyboard-numbers">
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="1">1</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="2">2</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="3">3</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="4">4</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="5">5</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="6">6</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="7">7</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="8">8</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="9">9</div>
+                    <div class="d-flex key shift-affected-key aftertap-key" data-char="0">0</div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key aftertap-key" data-char="@">@</div>
+                    <div class="d-flex key aftertap-key" data-char="#">#</div>
+                    <div class="d-flex key aftertap-key" data-char="€">€</div>
+                    <div class="d-flex key aftertap-key" data-char="&">&</div>
+                    <div class="d-flex key aftertap-key" data-char="_">_</div>
+                    <div class="d-flex key aftertap-key" data-char="-">-</div>
+                    <div class="d-flex key aftertap-key" data-char="(">(</div>
+                    <div class="d-flex key aftertap-key" data-char=")">)</div>
+                    <div class="d-flex key aftertap-key" data-char="=">=</div>
+                    <div class="d-flex key aftertap-key" data-char="%">%</div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key special-key-thin n-to-s-key">{&=</div>
+                    <div class="d-flex key aftertap-key" data-char='"'>"</div>
+                    <div class="d-flex key aftertap-key" data-char="*">*</div>
+                    <div class="d-flex key aftertap-key" data-char="'">'</div>
+                    <div class="d-flex key aftertap-key" data-char=":">:</div>
+                    <div class="d-flex key aftertap-key" data-char="/">/</div>
+                    <div class="d-flex key aftertap-key" data-char="!">!</div>
+                    <div class="d-flex key aftertap-key" data-char="?">?</div>
+                    <div class="d-flex key aftertap-key" data-char="+">+</div>
+                    <div class="d-flex key special-key-thin"><img src="assets/backspace.png"></div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key special-key-wide n-to-l-key">abc</div>
+                    <div class="d-flex key aftertap-key" data-char=",">,</div>
+                    <div class="d-flex key space-key"><img src="assets/space.png"></div>
+                    <div class="d-flex key aftertap-key" data-char=".">.</div>
+                    <div class="d-flex key special-key-wide"><img src="assets/enter.png"></div>
+                </div>
+            </div>
+
+            <div class="keyboard-symbols">
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key aftertap-key" data-char="$">$</div>
+                    <div class="d-flex key aftertap-key" data-char="€">€</div>
+                    <div class="d-flex key aftertap-key" data-char="¥">¥</div>
+                    <div class="d-flex key aftertap-key" data-char="¢">¢</div>
+                    <div class="d-flex key aftertap-key" data-char="©">©</div>
+                    <div class="d-flex key aftertap-key" data-char="®">®</div>
+                    <div class="d-flex key aftertap-key" data-char="™">™</div>
+                    <div class="d-flex key aftertap-key" data-char="~">~</div>
+                    <div class="d-flex key aftertap-key" data-char="¶">¶</div>
+                    <div class="d-flex key aftertap-key" data-char="§">§</div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key aftertap-key" data-char="[">[</div>
+                    <div class="d-flex key aftertap-key" data-char="]">]</div>
+                    <div class="d-flex key aftertap-key" data-char="{">{</div>
+                    <div class="d-flex key aftertap-key" data-char="}">}</div>
+                    <div class="d-flex key aftertap-key" data-char="<"><</div>
+                    <div class="d-flex key aftertap-key" data-char=">">></div>
+                    <div class="d-flex key aftertap-key" data-char="^">^</div>
+                    <div class="d-flex key aftertap-key" data-char="¬">¬</div>
+                    <div class="d-flex key aftertap-key" data-char="|">|</div>
+                    <div class="d-flex key aftertap-key" data-char="¦">¦</div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key special-key-thin s-to-n-key">123</div>
+                    <div class="d-flex key aftertap-key" data-char="°">°</div>
+                    <div class="d-flex key aftertap-key" data-char="÷">÷</div>
+                    <div class="d-flex key aftertap-key" data-char="`">`</div>
+                    <div class="d-flex key aftertap-key" data-char=";">;</div>
+                    <div class="d-flex key aftertap-key" data-char="\">\</div>
+                    <div class="d-flex key aftertap-key" data-char="¡">¡</div>
+                    <div class="d-flex key aftertap-key" data-char="¿">¿</div>
+                    <div class="d-flex key aftertap-key" data-char="×">×</div>
+                    <div class="d-flex key special-key-thin"><img src="assets/backspace.png"></div>
+                </div>
+                <div class="d-flex keyboard-row">
+                    <div class="d-flex key special-key-wide n-to-l-key">abc</div>
+                    <div class="d-flex key aftertap-key" data-char=",">,</div>
+                    <div class="d-flex key space-key"><img src="assets/space.png"></div>
+                    <div class="d-flex key aftertap-key" data-char=".">.</div>
+                    <div class="d-flex key special-key-wide"><img src="assets/enter.png"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="assets/jquery_3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Controller</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/easy-remote.ico">
+</head>
+
+<body>
+    <div class="connect-screen">
+        <div class="triangle-top-left"></div>
+        <div class="triangle-bottom-right"></div>
+        <div class="triangle-top-right"></div>
+        <div class="triangle-bottom-left"></div>
+        <img class="logo" src="assets/easy-remote.png">
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password" autocomplete="off">
+        <br>
+        <button class="connect">Connect</button>
+        <p class="connect-error"></p>
+        <div class="loading"></div>
+
+    </div>
+
+    <div class="main" style="display: none;">
+        <div class="menu-button">
+            <hr><hr><hr>
+        </div>
+        <div class="menu">
+            <ul class="menu-items">
+                <li>
+                    <p>
+                        Screenshare interval:
+                    </p>
+                    <div class="menu-item-interactives">
+                        <div class="menu-item-input">
+                            <input type="number" id="screenshare-interval-input">
+                            <p>ms</p>
+                        </div>
+                        <p>?</p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        Mouse update interval:
+                    </p>
+                    <div class="menu-item-interactives">
+                        <div class="menu-item-input">
+                            <input type="number" id="mouse-update-interval-input">
+                            <p>ms</p>
+                        </div>
+                        <p>?</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="menu-buttons">
+                <button id="menu-save">Save</button>
+                <button id="disconnect">Disconnect</button>
+            </div>
+        </div>
+        <div class="screen"></div>
+        <div class="interact">
+            <input id="sensitivity" type="range" min="100" max="500" value="300">
+            <p class="sensitivity-display"></p>
+            <div class="hotkeys"></div>
+            <input id="keyboard" type="text" placeholder="Click here to open keyboard" autocomplete="off">
+            <div class="touchpad"></div>
+        </div>
+    </div>
+    <div class="not-android-screen">
+        <img class="logo-attention" src="assets/easy-remote.png">
+        <p>Easy Remote only supports mobile devices at the moment.</p>
+    </div>
+    <div class="landscape-screen">
+        <img class="logo-attention" src="assets/easy-remote.png">
+        <p>Easy Remote only supports portrait view.</p>
+    </div>
+
+    <script src="assets/jquery_3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

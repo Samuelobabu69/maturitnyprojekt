@@ -1,0 +1,21 @@
+Rozmery pre krabičku
+-------------------
+Vstup: 6mm x 14,5mm
+Výstup: MIN. 5mm priemer
+Vstup pre pico: 12mm od spodu nep. poľa, 10mm x 5mm
+Nepajive pole: 56mm x 83,5mm x 10mm
+Krabička: 60mm x 87,5mm x 50mm
+
+
+
+Merania
+---------
+Pico GP2: 
+3.3V - 30.7mA
+
+PC F_PANEL power button piny:
+3.3V - 0.5mA
+
+PC F_PANEL power LED piny:
+Biela: 3.03V
+Oranžová: -1.97V

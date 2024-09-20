@@ -1,0 +1,291 @@
+:root {
+    --colorbg1: #000584;
+    --colorbg2: #0A0172;
+    --colorkey: #4c52fc;
+    --colorkeyboard: #212121;
+    --colorkeyhold: #1a1a1a;
+    --colormousepadborder: rgb(46, 46, 46);
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: var(--colorbg1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6, textarea, button, input {
+    font-family: "Tilt Neon", sans-serif;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -9999;
+}
+
+.bg-stripe {
+    background: var(--colorbg2);
+    width: 200%;
+    height: 50px;
+    transform: rotate(-45deg) translateX(-25%);
+    margin-bottom: 100px;
+}
+
+.bg-moving {
+    animation: bg-anim 2s infinite linear;
+    position: absolute;
+    top: -400px;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-fade-top {
+    background: linear-gradient(0deg, transparent 0%, var(--colorbg2) 100%);
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+}
+
+.bg-fade-bottom {
+    background: linear-gradient(180deg, transparent 0%, var(--colorbg2) 100%);
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    bottom: 0;
+}
+
+.login {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo-img {
+    max-width: 70%;
+}
+
+.password-input {
+    height: 10%;
+}
+
+.password-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+}
+
+.password-wrapper::before {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    content: "";
+    background: linear-gradient(90deg, white, transparent);
+    width: 140%;
+    height: 3px;
+}
+
+#access-password {
+    width: 100%;
+    height: 25px;
+    background: transparent;
+    border: none;
+    font-size: x-large;
+    color: white;
+}
+
+#access-password:focus {
+    outline: none;
+}
+
+.show-password-btn {
+    background: transparent;
+    border: none;
+    width: 14%;
+    height: auto;
+}
+
+.show-password-btn img {
+    max-width: 100%;
+}
+
+.connect-btn {
+    background-color: transparent;
+    border: 4px solid white;
+    border-top: none;
+    border-right: none;
+    border-radius: 50px;
+    height: 60px;
+    width: 150px;
+    color: white;
+    font-size: larger;
+    margin-bottom: 100px;
+    margin-top: 25px;
+}
+
+
+.control {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.keyboard {
+    position: absolute;
+    bottom: -260px;
+    height: 260px;
+    width: 100%;
+    background-color: var(--colorkeyboard);
+    transition: bottom 0.3s;
+}
+
+.keyboard-letters {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.keyboard-row {
+    width: 100%;
+}
+
+.key {
+    width: calc(100%/10);
+    height: 52px;
+    color: white;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: x-large;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    -webkit-touch-callout: none; 
+    border-radius: 5px;
+}
+
+.key img {
+    max-width: 50%;
+}
+
+.key-aftertap {
+    position: absolute;
+    width: calc(100%/10);
+    transform: translateY(-25%);
+    height: 104px;
+    background-color: var(--colorkey);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    font-size: x-large;
+}
+
+.key-alternate-selector {
+    width: 80%;
+    height: 93%;
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+
+.special-key-wide {
+    width: calc(100%/6.7);
+    color: var(--colorbg1);
+    font-size: x-large;
+}
+
+.special-key-thin {
+    color: var(--colorbg1);
+    font-size: large;
+}
+
+.space-key {
+    width: calc(100%/2);
+}
+
+.space-key img {
+    max-width: 20%;
+}
+
+.keyboard-numbers {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.keyboard-symbols {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.mousepad {
+    position: absolute;
+    bottom: 0;
+    height: 260px;
+    width: 100%;
+    background-color: var(--colorkeyboard);
+}
+
+.mousepad-border {
+    width: 90%;
+    height: 80%;
+    border: 5px solid var(--colormousepadborder);
+    border-radius: 20px;
+    color: var(--colormousepadborder);
+    font-size: x-large;
+    font-family: "Tilt Neon", sans-serif;
+}
+
+.keyboard-to-mousepad-switch, .mousepad-to-keyboard-switch {
+    position: absolute;
+    bottom: 265px;
+    right: 0px;
+    width: 20%;
+    height: 70px;
+    transition: bottom 0.3s;
+}
+
+.keyboard-to-mousepad-switch {
+    bottom: 190px;
+}
+
+.keyboard-to-mousepad-switch img, .mousepad-to-keyboard-switch img {
+    max-width: 70%;
+    max-height: 80%;
+}
+
+
+@keyframes bg-anim {
+    0% {
+        top: -400px;
+    }
+
+    100% {
+        top: -550px;
+    }
+}
